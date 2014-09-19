@@ -1,0 +1,84 @@
+body {
+    background-color: #032843;
+}
+
+#dDate {
+/*    height: 100px;
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    top: -50%; left: 0; bottom: 0; right: 0;
+    padding-top: 10px;*/
+    font-family: courier, monospace;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+
+}
+
+div.cDate {
+    float: left;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 0px;
+    font-family: courier, monospace;
+    text-align: center;
+    color: white;
+    font-size: 90%;
+    font-weight: lighter;
+/*    border:solid 1px #fff;
+*/    vertical-align: center;
+    padding-top: 8%;
+}
+
+div.cClock {
+    float: left;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 0px;
+    font-family: courier, monospace;
+    text-align: center;
+    color: white;
+    font-size: 800%;
+    font-weight: lighter;
+/*    border:solid 1px #fff;
+*/    vertical-align: center;
+    padding-top: 9  %;
+}
+
+#sub {
+/*    float: left;
+    height: 100px;
+    width: 900px;
+    margin: auto;*/
+/*    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 0px;*/
+    font-family: courier, monospace;
+/*    text-align: center;
+*/    color: white;
+    font-size: 40%;
+
+}
+
+/*#clock {
+    float: left;
+    height: 100px;
+    width: 900px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 0px;
+    font-family: courier, monospace;
+    text-align: center;
+    color: white;
+    font-size: 200%;
+    font-weight: lighter;
+    border:solid 1px #fff;
+}*/

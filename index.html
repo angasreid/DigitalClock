@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Clock</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/weather.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        function displayDate() {
+            var mydate= new Date();
+            var year=mydate.getYear();
+            if (year < 1000);
+                year+=1900;
+            
+            var day=mydate.getDay();
+            var month=mydate.getMonth();
+            var daym=mydate.getDate();
+            
+            if (daym<10) {
+                daym="0"+daym
+            }
+    
+            var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+                                    "Friday","Saturday");
+
+            var montharray=new Array("January","February","March","April","May","June",
+                                    "July","August","September","October","November","December");
+    
+            var dateDiv = document.getElementById('dDate');
+
+            dateDiv.innerText = (dayarray[day]+", "+montharray[month]+" "+daym+", "+year);
+                // document.write(dayarray[day]+", "+montharray[month]+" "+daym+", "+year)
+        }
+
+        displayDate();
+
+    	function displayTime() {
+    		var currentTime = new Date();
+    		var hours = currentTime.getHours();
+    		var minutes = currentTime.getMinutes();
+    		var seconds = currentTime.getSeconds();
+    		//
+    		var clockDiv = document.getElementById('clock');
+            var subDiv = document.getElementById('sub');
+    		
+
+            // running the displayTime function every second.
+            
+
+            if (hours > 12) {
+                hours = hours - 12;
+                meridiem = "PM";
+            }
+
+            // 0 AM and 0 PM should read as 12
+            if (hours === 0) {
+                hours = 12;    
+}
+
+            if (seconds < 10) 
+                // Add the "0" digit to the front
+                seconds = "0" + seconds;
+            
+
+            if (minutes < 10) 
+                // Add the "0" digit to the front
+                minutes = "0" + minutes;
+            
+            clockDiv.innerText = hours + ":" + minutes;
+            subDiv.innerText = ": " + seconds + " " + meridiem;
+
+    		// console.log(currentTime);
+    		// console.log(hours);
+    	}
+
+    	displayTime();
+        setInterval(displayTime, 1200);
+        setInterval(displayDate, 140000);
+
+	});
+
+
+	</script>
+	</head>
+<body>
+    <div class = "cDate"><span id = "dDate"></span></div>
+    <div class = "cClock"><span id="clock"></span><span id="sub"></span></div>
+
+<!--     <div id="weather"></div>
+<button class="js-geolocation" style="display: none;">Use Your Location</button> -->
+
+<!-- 	<span id="clock"></span><span id="sub"></span>  
+ --></body>
+</html>
+
+
