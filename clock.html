@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Clock</title>
+
+
+	<script type="text/javascript">
+
+	function clock() {
+		var time = new Date();
+		var currentHours = time.getHours();
+		var currentMinutes = time.getMinutes();
+		var currentSeconds = time.getSeconds();
+		 
+		var currentTime = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+ 
+		document.getElementById("digital").innerHTML = currentTime;
+	}
+
+	</script>
+	</head>
+<body>                    <!-- The body is the displayed parts of the doc. -->
+	<h1>Digital Clock</h1> 
+	<span id="clock"></span>
+</body>
+</html>
+
+
